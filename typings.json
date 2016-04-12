@@ -1,0 +1,8 @@
+{
+  "name": "novelupdates_rss",
+  "version": false,
+  "dependencies": {},
+  "ambientDependencies": {
+    "koa": "registry:dt/koa#2.0.0+20160317120654"
+  }
+}
