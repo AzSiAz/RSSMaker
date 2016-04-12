@@ -1,0 +1,15 @@
+{
+  "name": "novelupdates_rss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "AzSiAz",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "gogs@git.azsiaz.tech:AzSiAz/NovelupdatesRSS.git"
+  }
+}
