@@ -19,9 +19,16 @@ var feed = new Feed({
 });
 var last = {};
 
-app.get('/rss/novelupdates', function (req, res) {
+app.get('/rss/novelupdates/baka-tsuki', function (req, res) {
   res.set('Content-Type', 'application/rss+xml');
-  parseData(function (data) {
+  parseData('http://www.novelupdates.com/group/baka-tsuki/', function (data) {
+    res.send(feed.render('rss-2.0'));
+  })
+});
+
+app.get('/rss/novelupdates/nanodesu', function (req, res) {
+  res.set('Content-Type', 'application/rss+xml');
+  parseData('http://www.novelupdates.com/group/nanodesu/', function (data) {
     res.send(feed.render('rss-2.0'));
   })
 });
@@ -34,8 +41,8 @@ function correctData(data) {
   
 }
 
-function parseData(callback) {
-  cloudscraper.get('http://www.novelupdates.com/group/baka-tsuki/', function(error, response, body) {
+function parseData(url, callback) {
+  cloudscraper.get(url, function(error, response, body) {
   if (error) {
     console.log('Error occurred');
   } else {
