@@ -35,12 +35,10 @@ function correctData(data) {
 }
 
 function parseData(callback) {
-  console.log(1);
   cloudscraper.get('http://www.novelupdates.com/group/baka-tsuki/', function(error, response, body) {
   if (error) {
     console.log('Error occurred');
   } else {
-    console.log('2')
     jsdom.env({
       html: body,
       scripts: ['http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js'],
