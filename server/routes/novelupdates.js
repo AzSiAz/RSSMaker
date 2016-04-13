@@ -2,7 +2,7 @@ var parseData = require('../utils/parsedata');
 var getFeed = require('../utils/getfeed');
 
 var novelupdates = {
-  groups: function groups(req, res) {
+  group: function group(req, res) {
     var group = req.params.group
     var feed = getFeed.getFeedGroup(group)
     res.set('Content-Type', 'application/rss+xml');
