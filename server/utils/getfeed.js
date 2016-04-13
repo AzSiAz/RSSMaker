@@ -3,9 +3,9 @@ var Feed = require('feed');
 var getFeed = {
   getFeedGroup: function getFeedGroup(group) {
     return new Feed({
-      title: groups +' NovelUpdates',
-      description: 'NovelUpdates ' + groups + ' group update',
-      link: 'http://www.novelupdates.com/group/' + groups,
+      title: group +' NovelUpdates',
+      description: 'NovelUpdates ' + group + ' group update',
+      link: 'http://www.novelupdates.com/group/' + group,
       image: 'http://www.novelupdates.com/wp-content/uploads/2015/10/ndfavicon.ico',
       copyright: '',
       updated: new Date(),
