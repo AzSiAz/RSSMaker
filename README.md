@@ -1,3 +1,19 @@
 # RSSMaker
 
-Beware crappy (for now) code for personal use + bypassing cloudflare is reaaaaalllly slow^^
+Make RSS flux for Novelupdates for groups and novels updates
+
+But make sur your RSS reader have at least 10s timeout because cloudflare need 5s minimum
+
+#Install
+
+!You will NodeJS to use this!     
+
+```
+npm install
+npm start
+```
+
+#Planned
+  - Add rss flux for Novelupdates principal page
+  - Add Madokami (just Novel ?)
+  - Add Mangaupdates to have just novel updates and group release
