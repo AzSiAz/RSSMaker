@@ -1,3 +1,3 @@
-# NovelupdatesRSS
+# MakeRSS
 
-Beware crappy code for personal use + bypassing cloudflare is reaaaaalllly slow^^
+Beware crappy (for now) code for personal use + bypassing cloudflare is reaaaaalllly slow^^
