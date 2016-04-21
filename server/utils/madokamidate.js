@@ -2,8 +2,7 @@ var moment = require("moment");
 
 function parseDate(date) {
   if (moment(date).isValid() == false) {
-    // regex : date.replace(/\D+$/g, "");
-    return moment().subtract((date.includes("hours") ? "h" : "d"), date.charAt(0)).toDate();
+    return moment(Date.now()).subtract(date.replace(/\D+$/g, ""), (date.includes("hours") ? "h" : "d")).toDate();
   }
   else {
     return new Date(date);
