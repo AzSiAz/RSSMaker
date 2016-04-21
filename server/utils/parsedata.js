@@ -1,30 +1,53 @@
 var cloudscraper = require('cloudscraper');
 var jsdom = require('jsdom');
+var moment = require('moment');
+var madokamidate = require('../utils/madokamidate');
 
-function parseData(url, feed, callback) {
-  cloudscraper.get(url, function(error, response, body) {
-  if (error) {
-    console.log('Error occurred');
-  } else {
-    jsdom.env({
-      html: body,
-      scripts: ['http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js'],
-      done: function (errors, window) {
+var parseData = {
+  novelupdates: function(url, feed, callback) {
+    cloudscraper.get(url, function(error, response, body) {
+      if (error) {
+        console.log('Error occurred');
+      } else {
+        jsdom.env({
+          html: body,
+          scripts: ['http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js'],
+          done: function (errors, window) {
+            var $ = window.$;
+            $('#myTable > tbody > tr').each(function (index) {
+              var object = {
+                date: moment.utc(this.cells[0].innerHTML, "MM/DD/YY").toDate(),
+                title: $(this).find('a').first().text() + ' ' + $(this).find('a').last().text(),
+                description: '',
+                link: $(this).find('a').last().attr('href')
+              }
+              feed.addItem(object);
+            })
+            callback();
+          }
+        });
+      }
+    });
+  },
+  madokami: function(url, feed, callback) {
+    jsdom.env(
+      url,
+      ["http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"],
+      function (err, window) {
         var $ = window.$;
-        $('#myTable > tbody > tr').each(function (index) {
+        $('#index-table > tbody > tr').each(function (index) {
           var object = {
-            date: new Date(this.cells[0].innerHTML),
-            title: $(this).find('a').first().text() + ' ' + $(this).find('a').last().text(),
+            date: madokamidate(this.cells[2].innerHTML.trim()),
+            title: $(this).find('a').first().text(),
             description: '',
-            link: $(this).find('a').last().attr('href')
+            link: 'https://manga.madokami.com' + $(this).find('a').first().attr('href')
           }
           feed.addItem(object);
         })
         callback();
       }
-    });
+    );
   }
-});
 }
 
 module.exports = parseData;

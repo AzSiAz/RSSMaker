@@ -18,6 +18,6 @@ describe('Parse Date', function () {
   
   it('Should work with real date from Madokami', function () {
     var date = madokamidate("2016-04-12 00:58");
-    expect(date.toUTCString()).to.equal("Sun, 04 Dec 2016 00:58:00 GMT");
+    expect(date.toUTCString()).to.equal("Tue, 12 Apr 2016 00:58:00 GMT");
   })
 })
