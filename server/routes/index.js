@@ -12,10 +12,10 @@ router.get('/', cache('10 minutes'), function (req, res) {
 });
 
 // NovelUpdates routes
-router.get('/rss/novelupdates/group/:group', cache('5 minutes'), novelupdates.group);
-router.get('/rss/novelupdates/novel/:novel', cache('5 minutes'), novelupdates.novel);
+router.get('/rss/novelupdates/group/:group', novelupdates.group);
+router.get('/rss/novelupdates/novel/:novel', novelupdates.novel);
 
 // Madokami route
-router.get('/rss/madokami/', cache('5 minutes'), madokami.madokamiNovelList);
+router.get('/rss/madokami/', madokami.madokamiNovelList);
 
 module.exports = router;
