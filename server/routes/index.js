@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-var apicache  = require('apicache');
-var cache     = apicache.middleware;
+var apicache = require('apicache');
+var cache = apicache.middleware;
 
 var novelupdates = require('./novelupdates')
 
