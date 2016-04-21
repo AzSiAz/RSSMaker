@@ -5,7 +5,7 @@ const expect = chai.expect;
 const assert = chai.assert;
 const should = chai.should();
 
-describe('Parse Date', function () {
+describe('Parse Madokami Date', function () {
   it('2016-04-12 00:58 should be a valid date', function () {
     expect(moment.utc('2016-04-12 00:58', 'YYYY-MM-DD HH-mm').isValid()).to.be.true;
   });
