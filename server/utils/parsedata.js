@@ -40,7 +40,7 @@ var parseData = {
           title.endsWith('/') ? title = title.slice(0, title.length - 1) : title;
           var object = {
             date: madokamidate(this.cells[2].innerHTML.trim()),
-            title: title,
+            title: title + ' updated',
             description: '',
             link: 'https://manga.madokami.com' + $(this).find('a').first().attr('href')
           }
