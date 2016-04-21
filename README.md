@@ -17,6 +17,5 @@ npm start
 ```
 
 ## Planned
-  - Add rss flux for Novelupdates principal page
-  - Add Madokami (just Novel ?)
-  - Add Mangaupdates to have just novel updates and group release
+  - Add rss flux for Novelupdates principal page    
+  - Add Mangaupdates to have just novel updates and group release   
