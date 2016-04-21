@@ -1,5 +1,6 @@
 var cloudscraper = require('cloudscraper');
 var jsdom = require('jsdom');
+var moment = require('moment');
 
 function parseData(url, feed, callback) {
   cloudscraper.get(url, function(error, response, body) {
@@ -13,7 +14,7 @@ function parseData(url, feed, callback) {
         var $ = window.$;
         $('#myTable > tbody > tr').each(function (index) {
           var object = {
-            date: new Date(this.cells[0].innerHTML),
+            date: moment.utc(this.cells[0].innerHTML, "MM/DD/YY").toDate(),
             title: $(this).find('a').first().text() + ' ' + $(this).find('a').last().text(),
             description: '',
             link: $(this).find('a').last().attr('href')
