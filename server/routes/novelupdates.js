@@ -6,7 +6,7 @@ var novelupdates = {
     var group = req.params.group
     var feed = getFeed.getNovelUpdatesFeedGroup(group);
     res.set('Content-Type', 'application/rss+xml');
-    parseData('http://www.novelupdates.com/group/' + group, feed, function (data) {
+    parseData.novelupdates('http://www.novelupdates.com/group/' + group, feed, function (data) {
       res.send(feed.render('rss-2.0'));
     })
   },
@@ -15,7 +15,7 @@ var novelupdates = {
     var novel = req.params.novel
     var feed = getFeed.getNovelUpdatesFeedNovel(novel);
     res.set('Content-Type', 'application/rss+xml');
-    parseData('http://www.novelupdates.com/series/' + novel, feed, function (data) {
+    parseData.novelupdates('http://www.novelupdates.com/series/' + novel, feed, function (data) {
       res.send(feed.render('rss-2.0'));
     })
   }

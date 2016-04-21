@@ -31,7 +31,7 @@ var getFeed = {
       }
     })
   },
-  getMadokamiFeedList: function getMadokamiFeedList(page) {
+  getMadokamiFeedList: function getMadokamiFeedList() {
     return new Feed({
       title: 'Madokami Novel List',
       description: 'Madokami update',
