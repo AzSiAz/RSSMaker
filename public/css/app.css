@@ -1,0 +1,33 @@
+body {
+  background-color: #ecf0f1 !important;
+}
+
+header {
+  padding-top: 2vh;
+  max-height: 10vh;
+  border-bottom: 0.5px solid lightslategray;
+}
+
+.wrapper {
+  min-height: 80vh;
+  padding-left: 4vw;
+  padding-right: 1vw;
+}
+
+@media screen and (max-width: 960px) {
+  .wrapper {
+    min-height: 70vh;
+  }
+  footer {
+    /*margin-top: 5vh;*/
+    margin-bottom: 2vh;
+  }
+}
+
+/*footer {
+  min-height: 10vh;*/
+  /*border-top: 0.5px solid lightslategray;*/
+  /*padding-left: 1vw;
+  padding-right: 1vw;
+}*/
+

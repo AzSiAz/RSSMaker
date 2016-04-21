@@ -7,7 +7,8 @@ var novelupdates = require('./novelupdates')
 var madokami = require('./madokami');
 
 router.get('/', cache('10 minutes'), function (req, res) {
-  res.send('RSS Maker');
+  // res.send('RSS Maker');
+  res.sendFile(__dirname + "../../public/index.html");
 });
 
 // NovelUpdates routes

@@ -5,7 +5,9 @@ var morgan = require('morgan')
 
 app.use(morgan('dev'));
 
+app.use(express.static(__dirname + '/public'));
+
 app.use('/', require('./server/routes'));
 
 
-var server = http.createServer(app).listen(4000, '127.0.0.1');
+var server = http.createServer(app).listen(4000, '0.0.0.0');

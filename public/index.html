@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RSSMaker - AzSiAz</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1 height=device-height" />
+		<link rel="stylesheet" href="css/kube.min.css" />
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+	</head>
+	<body>
+		<header class="text-centered">
+			<h1>RSS Maker</h1>
+		</header>
+		<div class="wrapper">
+			<div>
+				<p>
+					<h2>Route :</h2>
+					<ul>
+						<li><a href="#NovelUpdatesGroup">/rss/novelupdates/group/:group</a></li>
+						<li><a href="#NovelUpdatesNovel">/rss/novelupdates/novel/:novel</a></li>
+						<li><a href="#MadokamiList">/rss/madokami</a></li>
+					</ul>
+				</p>
+			</div>
+			<hr>
+			<div>
+				<div id="NovelUpdatesGroup">
+					<h2 class="text-centered">NovelUpdates Group</h2>
+					<p>
+						Get novel chapter/volume date release, replace :novel by novel name <br>
+						Ex: <a href="http://www.novelupdates.com/group/baka-tsuki/">http://www.novelupdates.com/group/baka-tsuki</a> 
+						become <a href="/rss/novelupdates/group/baka-tsuki">/rss/novelupdates/group/baka-tsuki</a>
+					</p><br>
+				</div>
+				<div id="NovelUpdatesNovel">
+					<h2 class="text-centered">NovelUpdates Novel</h2>
+					<p>
+						Get novel chapter/volume date release, replace :novel by novel name <br>
+						Ex: <a href="http://www.novelupdates.com/series/rakudai-kishi-no-eiyuutan/">http://www.novelupdates.com/series/rakudai-kishi-no-eiyuutan/</a> 
+						become <a href="/rss/novelupdates/novel/rakudai-kishi-no-eiyuutan">/rss/novelupdates/novel/rakudai-kishi-no-eiyuutan</a>
+					</p><br>
+				</div>
+				<div>
+					<h2 class="text-centered">Madokami Novel list</h2>
+					<p>
+						Get List from <a href="https://manga.madokami.com/Novels?order=time&dir=desc">Madokami</a><br>
+						URL : <a href="/rss/madokami">/rss/madokami</a>
+					</p><br>
+				</div>
+			</div>
+		</div>
+		<footer class="text-centered">
+			<a href="https://git.azsiaz.tech/AzSiAz/RSSMaker">RSSMaker v1.0.0</a>
+		</footer>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
