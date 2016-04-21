@@ -6,7 +6,7 @@ var cache = apicache.middleware;
 var novelupdates = require('./novelupdates')
 var madokami = require('./madokami');
 
-router.get('/', cache('10 minutes'), function (req, res) {
+router.get('/', function (req, res) {
   // res.send('RSS Maker');
   res.sendFile(__dirname + "../../public/index.html");
 });
