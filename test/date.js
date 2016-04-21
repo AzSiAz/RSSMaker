@@ -16,6 +16,18 @@ describe('Parse Madokami Date', function () {
     expect(date).to.equal(equal);
   })
   
+  it('Should return a date 13 days ago', function () {
+    var date = madokamidate("13 days ago").toUTCString();
+    var equal = moment.utc().subtract(13, 'days').toDate().toUTCString();
+    expect(date).to.equal(equal);
+  })
+  
+  it('Should return a date 13 minutes ago', function () {
+    var date = madokamidate("13 minutes ago").toUTCString();
+    var equal = moment.utc().subtract(13, 'minutes').toDate().toUTCString();
+    expect(date).to.equal(equal);
+  })
+  
   it('Should work with real date from Madokami', function () {
     var date = madokamidate("2016-04-12 00:58");
     expect(date.toUTCString()).to.equal("Tue, 12 Apr 2016 00:58:00 GMT");
