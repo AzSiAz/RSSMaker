@@ -5,7 +5,7 @@ function parseDate(date) {
     return moment().subtract(date.replace(/\D+$/g, ""), (date.includes("hours") ? "h" : "d")).toDate();
   }
   else {
-    return new Date(date);
+    return moment(date, "YYYY-DD-MM").toDate();
   }
 }
 
