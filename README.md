@@ -1,4 +1,5 @@
 # RSSMaker
+[![Dependency Status](https://www.versioneye.com/user/projects/57189327cc9e1e00129b1a30/badge.svg?style=flat)](https://www.versioneye.com/user/projects/57189327cc9e1e00129b1a30)       
 
 Make RSS flux for Novelupdates for groups and novels updates
 
