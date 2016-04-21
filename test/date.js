@@ -7,12 +7,12 @@ const should = chai.should();
 
 describe('Parse Date', function () {
   it('2016-04-12 00:58 should be a valid date', function () {
-    expect(moment('2016-04-12 00:58', 'YYYY-MM-DD HH-mm').isValid()).to.be.true;
+    expect(moment.utc('2016-04-12 00:58', 'YYYY-MM-DD HH-mm').isValid()).to.be.true;
   });
   
   it('Should return a date 13 hours ago', function () {
     var date = madokamidate("13 hours ago").toUTCString();
-    var equal = moment().subtract(13, 'hours').toDate().toUTCString();
+    var equal = moment.utc().subtract(13, 'hours').toDate().toUTCString();
     expect(date).to.equal(equal);
   })
   
