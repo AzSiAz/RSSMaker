@@ -38,9 +38,10 @@ var parseData = {
         $('#index-table > tbody > tr').each(function (index) {
           var title = $(this).find('a').first().text();
           title.endsWith('/') ? title = title.slice(0, title.length - 1) : title;
+          var mdate = madokamidate(this.cells[2].innerHTML.trim())
           var object = {
-            date: madokamidate(this.cells[2].innerHTML.trim()),
-            title: title + ' updated',
+            date: mdate,
+            title: title + ' updated - ' + mdate ,
             description: '',
             link: 'https://manga.madokami.com' + $(this).find('a').first().attr('href')
           }
