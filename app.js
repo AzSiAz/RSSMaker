@@ -1,6 +1,9 @@
 var express = require('express');
 var app = express();
-var morgan = require('morgan')
+var morgan = require('morgan');
+var compress = require('compression');
+
+app.use(compress());
 
 app.use(morgan('dev'));
 

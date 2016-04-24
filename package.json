@@ -16,6 +16,7 @@
   "dependencies": {
     "apicache": "0.0.14",
     "cloudscraper": "^1.2.2",
+    "compression": "^1.6.1",
     "express": "^4.13.4",
     "feed": "^0.3.0",
     "jsdom": "^8.3.1",
