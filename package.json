@@ -1,11 +1,11 @@
 {
-  "name": "rssmaker",
+  "name": "novelupdates-rss",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "test": "NODE_ENV=test ./node_modules/.bin/_mocha",
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "author": "AzSiAz",
   "license": "ISC",
@@ -26,5 +26,8 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5"
+  },
+  "bin": {
+    "novelupdates-rss": "bin/index.js"
   }
 }

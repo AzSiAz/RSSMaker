@@ -11,4 +11,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.use('/', require('./server/routes'));
 
-app.listen(4000, '0.0.0.0');
+
+module.exports = app;
+
+// app.listen(4000, '0.0.0.0');
