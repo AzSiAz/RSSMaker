@@ -1,7 +1,7 @@
 {
   "name": "novelupdates-rss",
   "version": "1.0.1",
-  "description": "",
+  "description": "Generate RSS for novelupdates website",
   "main": "app.js",
   "scripts": {
     "test": "NODE_ENV=test ./node_modules/.bin/_mocha",
