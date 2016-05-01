@@ -11,7 +11,15 @@ For those who don't want to install it or just see a demo here it is : https://r
 
 !You will NodeJS to use this!     
 
+Global install (port 4000) :
 ```
+npm i novelupdates-rss
+novelupdates-rss
+```
+
+Local install :
+```
+git clone http://git.azsiaz.tech/AzSiAz/RSSMaker.git
 npm install
 npm start
 ```
