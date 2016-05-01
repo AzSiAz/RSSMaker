@@ -1,3 +1,5 @@
+"use strict";
+
 var jsdom = require('jsdom');
 var moment = require('moment');
 var madokamidate = require('../utils/madokamidate');

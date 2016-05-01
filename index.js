@@ -13,5 +13,3 @@ app.use('/', require('./server/routes'));
 
 
 module.exports = app;
-
-// app.listen(4000, '0.0.0.0');
