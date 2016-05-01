@@ -1,7 +1,10 @@
+"use strict";
+
 var Feed = require('feed');
 
-var getFeed = {
-  getNovelUpdatesFeedGroup: function getFeedGroup(group) {
+class GetFeed {
+  
+  static getNovelUpdatesFeedGroup(group) {
     return new Feed({
       title: group +' NovelUpdates',
       description: 'NovelUpdates ' + group + ' group update',
@@ -14,9 +17,10 @@ var getFeed = {
         email: 'contact@azsiaz.tech',
         link: 'https://azsiaz.tech'
       }
-    })
-  },
-  getNovelUpdatesFeedNovel: function getFeedNovel(novel) {
+    });
+  }
+
+  static getNovelUpdatesFeedNovel(novel) {
     return new Feed({
       title: novel +' NovelUpdates',
       description: 'NovelUpdates ' + novel + ' novel update',
@@ -29,9 +33,10 @@ var getFeed = {
         email: 'contact@azsiaz.tech',
         link: 'https://azsiaz.tech'
       }
-    })
-  },
-  getMadokamiFeedList: function getMadokamiFeedList() {
+    });
+  }
+
+  static getMadokamiFeedList() {
     return new Feed({
       title: 'Madokami Novel List',
       description: 'Madokami update',
@@ -44,7 +49,9 @@ var getFeed = {
         email: 'contact@azsiaz.tech',
         link: 'https://azsiaz.tech'
       }
-    })
+    });
   }
+
 }
-module.exports = getFeed;
+
+module.exports = GetFeed;

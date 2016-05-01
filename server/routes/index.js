@@ -1,11 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-var novelupdates = require('./novelupdates')
+var novelupdates = require('./novelupdates');
 var madokami = require('./madokami');
 
 router.get('/', function (req, res) {
-  // res.send('RSS Maker');
   res.sendFile(__dirname + "../../public/index.html");
 });
 
