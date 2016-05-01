@@ -4,15 +4,15 @@ var moment = require('moment');
 var madokamidate = require('../utils/madokamidate');
 
 var parseData = {
-  novelupdates: function(url, feed, callback) {
-    cloudscraper.get(url, function(error, response, body) {
-      if (error) {
-        console.log('Error occurred');
-      } else {
-        jsdom.env({
-          html: body,
-          scripts: ['http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js'],
-          done: function (errors, window) {
+  novelupdates: function novelupdates(url, feed, callback) {
+    // cloudscraper.get(url, function(error, response, body) {
+    //   if (error) {
+    //     console.log('Error occurred');
+    //   } else {
+        jsdom.env(
+          url,
+          ['http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js'],
+          function (errors, window) {
             var $ = window.$;
             $('#myTable > tbody > tr').each(function (index) {
               var object = {
@@ -20,16 +20,16 @@ var parseData = {
                 title: $(this).find('a').first().text() + ' ' + $(this).find('a').last().text(),
                 description: '',
                 link: $(this).find('a').last().attr('href')
-              }
+              };
               feed.addItem(object);
-            })
+            });
             callback();
           }
-        });
-      }
-    });
+        );
+      // }
+    // });
   },
-  madokami: function(url, feed, callback) {
+  madokami: function madokami(url, feed, callback) {
     jsdom.env(
       url,
       ["http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"],
