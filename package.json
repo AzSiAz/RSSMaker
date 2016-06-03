@@ -7,6 +7,9 @@
     "test": "NODE_ENV=test ./node_modules/.bin/_mocha",
     "start": "node bin/index.js"
   },
+  "engines": {
+    "node": "6.2.1"
+  },
   "author": "AzSiAz",
   "license": "ISC",
   "repository": {
