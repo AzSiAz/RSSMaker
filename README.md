@@ -11,7 +11,7 @@ For those who don't want to install it or just see a demo here it is : https://r
 
 !You will NodeJS to use this!     
 
-Global install (port 4000) :
+Global install (port 5000) :
 ```
 npm i -g novelupdates-rss
 novelupdates-rss
