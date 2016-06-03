@@ -1,5 +1,5 @@
 # RSSMaker
-[![Dependency Status](https://www.versioneye.com/user/projects/57189327cc9e1e00129b1a30/badge.svg?style=flat)](https://www.versioneye.com/user/projects/57189327cc9e1e00129b1a30)       
+[![Dependency Status](https://www.versioneye.com/user/projects/5751fae97757a0003bd4ae35/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5751fae97757a0003bd4ae35)       
 
 Make RSS flux for Novelupdates for groups and novels updates
 
@@ -13,7 +13,7 @@ For those who don't want to install it or just see a demo here it is : https://r
 
 Global install (port 4000) :
 ```
-npm i novelupdates-rss
+npm i -g novelupdates-rss
 novelupdates-rss
 ```
 
