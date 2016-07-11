@@ -1,9 +1,12 @@
 "use strict";
 
 var jsdom = require('jsdom');
+var $ = require('cheerio');
 var moment = require('moment');
 var madokamidate = require('../utils/madokamidate');
 
+
+// TODO Change jsdom for cheerio
 class ParseData {
 
   static novelupdates(url, feed, callback) {
