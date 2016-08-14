@@ -21,7 +21,7 @@
     "cloudscraper": "^1.3.0",
     "compression": "^1.6.2",
     "express": "^4.14.0",
-    "cheerio": "0.20.0",
+    "cheerio": "^0.20.0",
     "feed": "^0.3.0",
     "jsdom": "^9.4.1",
     "moment": "^2.14.1",
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.5.3"
+    "mocha": "^3.0.2"
   },
   "bin": {
     "novelupdates-rss": "bin/index.js"
