@@ -1,4 +1,6 @@
 # RSSMaker
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/AzSiAz/RSSMaker.svg)](https://greenkeeper.io/)
 [![Dependency Status](https://www.versioneye.com/user/projects/5751fae97757a0003bd4ae35/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5751fae97757a0003bd4ae35)       
 
 Make RSS flux for Novelupdates for groups and novels updates
